@@ -1,0 +1,80 @@
+# The number at the end of the of each line is how much enabling this is going to improve server performance compared to other features
+# 下面每一行最后面的数字代表的是对服务器提升性能的帮助有多大
+# The numbers are on a scale of 1-10
+# 数字会在1-10之间
+# All features are enabled by default     //不要动
+version: 0.1.5
+
+# Automatically removes loaded chunks in worlds that have no players every 10 seconds. (9)       
+# 自动删除加载的区块，如果没有玩家每10秒钟运行一次    
+autoChunk: true
+
+# Removes spawn chunks for all worlds in your server. (10)
+# 删除你服务器所有世界所产生的区块
+noSpawnChunks: true
+
+# This determines if the Smart Lag Detection AI is working to keep your server lag free. (10)
+# 是否开启AI的工作来降低服务器的延迟
+smartlagai: true
+
+# Smart lag detection. If a player types "lag" or "lagg" in the chat and your server TPS is less than this number, the servers lag removal AI will become active. (10)
+# 当服务器TPS小于指定数时，AI将开始工作
+TPS: 16.00
+
+# Smart lag detection. If a player types "lag" or "lagg" in the chat and your server has less than this amount of ram left, the servers lag removal AI will become active. UNIT IN MEGABYTES (10)
+# 当你服务器的人在聊天过程中有出现lag或者lagg的的情况时，并且服务器内存低于指定值时，AI会开始工作（这功能在中国不管用吧）
+RAM: 100
+
+# This is the protocol id that you want executed by the smart lag removal tool. PROTOCOLS: clear_items, warn_clear_items, warn_clear_entities_all, warn_clear_entities_hostile, warn_clear_entities_peaceful, clear_entities_all, clear_entities_hostile, clear_entities_peaceful, command
+# 当你要执行机器人时，他会显示指定的标识（还要指定啊，上面选一个好看的吧= =）
+lag_protocol: warn_clear_items
+
+# This command will be run when the command protocol is used. This can be any command from any plugin. (WITHOUT THE / PREFIX)
+# 当使用了机器人的标识时，他会自动运行指定的服务器指令（其他插件的指令都行，比如say hello）
+lag_command: help 1
+
+# Item clearing cool down. This is how long the smart lag detection has to wait until it can run its protocol again. Time is in minutes!
+# 清除物品后的冷却时间
+protocol_cooldown: 5
+
+# This is a list of worlds that will not be automatically saved by the server. This reduces disk usage but can only be used for worlds in which the terrain is not being edited. Add DISABLED to the list to allow all worlds to automatically save. (6)
+# 自动保存服务器，避免数据丢失，下方可写不需要被此功能保存的世界
+nosaveworlds:
+- DISABLED
+
+# This automatically removes lag after a certain period of time. The time is in minutes.
+# 在间隔的时间自动优化服务器
+auto-lag-removal: false
+auto-lag-time: 10
+
+# This makes it where players without the lr.view permission can not view any messages from LaggRemover.
+# 该选项可以让没有lr.view权限的玩家没法查看该插件的公告
+incognito: false
+
+# This prevents mobs from spawning in a chunk that contains more than the amount of entities specified in the "thinAt" value. (10 because it can prevent players from creating lag machines)
+# 开启此选项可以防止一个区块出现过多的怪物（防止玩家建造刷怪场）
+thinMobs: true
+
+# The max number of entities that can spawn in a single chunk.
+# 一个区块中最大生成实体的数量
+thinAt: 30
+
+# Allows the LaggRemover AI (Artificial Inteligence) to perform action to lower the amount of packets being sent to just the player that typed lag. (10)
+# 开启此选项可以降低滞后玩家数据包的输入数量（不太懂，请求大神指点）
+doRelativeAction: true
+
+# When enabled, only allows the removal of items for relative lag removal for players. 
+# 当开启时，仅允许对玩家相关的项目延迟进行清理
+doOnlyItemsForRelative: false
+
+# This prevents non-hostile mobs from being removed by the relative lag removal system. THIS HAS TO BE DISABLED TO USE doOnlyItemsForRelative
+# 该选项可以防止对不具有攻击性的怪物进行清除
+dontDoFriendlyMobsForRelative: true
+
+# Change this to true to disable the use of the LaggRemover prefix. Note: Showing of the prefix helps out LaggRemover, if you disable it, please consider donating.
+# 关闭前缀，true则关闭
+disablePrefix: false
+
+# This is whether you would like this plugin to automatically check and install new updates. This is highly recommended.
+# 不用看了，自动升级
+auto-update: true

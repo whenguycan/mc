@@ -1,0 +1,8 @@
+normal:
+  prefix: "&b[\u81ea\u52a8\u516c\u544a]"
+  suffix: ''
+  interval: 120
+  random: false
+pro:
+  startuptime: 20
+  starttime: 2

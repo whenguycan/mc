@@ -1,0 +1,33 @@
+###########################################################
+##     脏话屏蔽  V3.6.1    配置文件汉化BY Legend_Kun      ##
+###########################################################
+
+#        选项中， false=不会或不是   true=会或是
+
+# 玩家说脏话时会不会被Kick
+KICK_ON_SWEAR: false
+
+# Kick的理由.如果不开启Kick，就是玩家说脏话时发给玩家的信息。 可以为中文字符
+KICK_MESSAGE: '&4脏话在这个服务器是禁止的!'
+
+# 玩家说脏话时是否以玩家为源头生成一个无伤害的爆炸
+EXPLOSION_ON_SWEAR: true
+
+# 当一句话中出现屏蔽词的时候，是否用<NEW_MESSAGE>替换掉玩家说的那一整段话
+REPLACE_MESSAGE: false
+
+# 句子中的屏蔽词是否用<NEW_MESSAGE>替换，其余部分依然显示。上面的选项为false了这个设置才有效
+BEEP_WORD: true
+
+# 玩家说脏话时在控制台上显示的信息，<player>为玩家名称
+COMMAND_ON_SWEAR: warn <player>
+
+# 用来替换脏话/句子的词/句
+NEW_MESSAGE: ※※
+
+# 默认屏蔽词列表，可修改
+list:
+  - ass
+  - fuck
+  - shit
+  

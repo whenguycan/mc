@@ -1,0 +1,19 @@
+lastAccountName: DIM
+timestamps:
+  login: 1468520384052
+  logout: 1468520461404
+ipAddress: 127.0.0.1
+lastlocation:
+  world: world
+  x: 233.5
+  y: 68.0
+  z: 266.5
+  yaw: 0.0
+  pitch: 0.0
+logoutlocation:
+  world: world
+  x: 325.9685312656141
+  y: 69.0
+  z: 273.4152767616614
+  yaw: 337.20074
+  pitch: 10.350115
