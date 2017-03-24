@@ -1,2 +1,2 @@
 #! /bin/sh
-java -Xms768m -Xmx768m -jar KCauldron.jar nogui
+java -Xms1536m -Xmx1536m -jar KCauldron.jar nogui
